@@ -1,27 +1,12 @@
-# Paperspace + Fast.ai Docker files
+# Paperspace + Nebula Docker files
 
 *Jupyterlab version*
 
-## Overview
-
-This is a docker build file designed to work with [Paperspace]. The latest pre-built runtimes are pushed here: https://hub.docker.com/r/paperspace/fastai/
-
-This container is intended to be used with to be used with the latest (v4) fast.ai fastbook repo. You can find this repo here: https://github.com/fastai/fastbook and you can learn more about the Fast.ai book here: http://book.fast.ai/
-
-course-v4 is no longer a repo -- please use the clean directory of the fastbook repository (fastbook/clean) for that content
-
-## Requirements:
-
-[Docker CE](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/)
-
-[NVIDIA-docker](https://github.com/NVIDIA/nvidia-docker)
-
-Nvidia Drivers
-
 
 ## Build
-
-`sudo docker build -t paperspace/fastai .`
+docker build -t dsivov/nebula_gradient:v05 .
+docker tag  dsivov/nebula_gradient:v05 dsivov/nebula_gradient:latest
+docker push  dsivov/nebula_gradient:latest
 
 ## Pre-built runtimes
 
