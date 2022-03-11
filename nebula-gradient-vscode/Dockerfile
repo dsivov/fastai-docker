@@ -32,7 +32,6 @@ RUN echo "deb http://developer.download.nvidia.com/compute/machine-learning/repo
     rm ~/miniconda.sh && \
     /opt/conda/bin/conda install conda-build && \
     conda env create -f environment.yaml
-RUN cd /root/.cache/ && ln -s /storage/models clip
 # Create Environment
 WORKDIR /notebooks
 # Activate Source

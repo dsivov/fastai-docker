@@ -314,6 +314,7 @@ dependencies:
     - prompt-toolkit==3.0.24
     - pyarrow==6.0.1
     - pydantic==1.8.2
+    - pymilvus==2.0.0
     - pynput==1.7.5
     - pyqt5==5.15.6
     - pyqt5-qt5==5.15.2
@@ -355,7 +356,4 @@ dependencies:
     - websocket-client==1.2.3
     - word2number==1.1
     - wordcloud==1.8.1
-    - openai 
-    - opencv-python
-    - git+https://github.com/openai/CLIP.git
-    - pymilvus==1.1.1
+prefix: /home/gil/anaconda3/envs/playground

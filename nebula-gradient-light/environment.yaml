@@ -1,0 +1,13 @@
+name: nebula 
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - jupyter_client
+  - jupyter_core
+  - jupyter_server
+  - jupyterlab
+  - jupyterlab_pygments
+  - jupyterlab_server
+  - jupyterlab_widgets
