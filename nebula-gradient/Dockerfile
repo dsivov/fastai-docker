@@ -31,17 +31,15 @@ RUN echo "deb http://developer.download.nvidia.com/compute/machine-learning/repo
     ~/miniconda.sh -b -p /opt/conda && \
     rm ~/miniconda.sh && \
     /opt/conda/bin/conda install conda-build && \
-    conda env create -f environment.yaml
-RUN cd /root/.cache/ && ln -s /storage/models clip
+    conda env create -f environment.yaml && \
+    conda clean --all -y && \
+    cd /root/.cache/ && ln -s /storage/models clip
 # Create Environment
 WORKDIR /notebooks
 # Activate Source
 #CMD source activate nebula && source ~/.bashrc
 ENV PATH /opt/conda/bin:$PATH
 ENV PATH /opt/conda/envs/nebula/bin:$PATH
-
-RUN chmod -R a+w /notebooks
-
 COPY run.sh /run.sh
 
 #CMD ["/run.sh"]

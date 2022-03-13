@@ -4,6 +4,12 @@ export SHELL=/bin/bash
 rm -rf /storage/lost+found
 #ln -s /datasets/nebula/* /storage/data/
 export TRANSFORMERS_CACHE=/storage/models 
+
+if [ ! -L /storage/models ]
+then
+   mkdir /storage/models
+fi
+
 if [ ! -d /storage/NEBULA2 ]
 then
    #rm -rf /storage/NEBULA2/notebooks/nebula_api/mdmmt_api/models/CLIP
@@ -21,6 +27,8 @@ fi
 export PYTHONPATH=/storage/NEBULA2
 
 if [ ! -L /notebooks/NEBULA ]
+then
+   chmod -R a+w /notebooks
    cd /notebooks && ln -s /storage/NEBULA2 NEBULA 
 fi
 #cd /root/.cache/ && ln -s /storage/models clip 
